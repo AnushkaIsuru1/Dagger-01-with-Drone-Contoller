@@ -4,9 +4,9 @@ function App() {
     <div className="App">
       <Headers>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Setting</li>
+          <li>Map</li>
+          <li>Reboot</li>
         </ul>
       </Headers>
     </div>
