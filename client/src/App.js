@@ -5,6 +5,8 @@ function App() {
       <Headers>
         <ul>
           <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </Headers>
     </div>
