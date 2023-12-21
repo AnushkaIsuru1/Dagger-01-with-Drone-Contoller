@@ -11,6 +11,7 @@ function App() {
       </Headers>
       <main>
         <div className="Left"></div>
+        <div className="RadarCont"></div>
       </main>
     </div>
   );
