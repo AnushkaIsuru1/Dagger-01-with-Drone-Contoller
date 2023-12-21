@@ -14,6 +14,9 @@ function App() {
         <div className="Left"></div>
         <div className="RadarCont"></div>
         <button className="btn1"></button>
+        <button className="btn1"></button>
+        <button className="btn2"></button>
+        <button className="btn2"></button>
         <div className="right"></div>
 
         
