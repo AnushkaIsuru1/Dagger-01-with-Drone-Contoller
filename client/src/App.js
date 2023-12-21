@@ -9,6 +9,9 @@ function App() {
           <li>Reboot</li>
         </ul>
       </Headers>
+      <main>
+        <div className="Left"></div>
+      </main>
     </div>
   );
 }
