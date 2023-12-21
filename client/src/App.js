@@ -7,6 +7,7 @@ function App() {
           <li>Setting</li>
           <li>Map</li>
           <li>Reboot</li>
+          <li>Shut Down</li>
         </ul>
       </Headers>
       <main>
