@@ -13,7 +13,10 @@ function App() {
       <main>
         <div className="Left"></div>
         <div className="RadarCont"></div>
+        <button className="btn1"></button>
         <div className="right"></div>
+
+        
       </main>
     </div>
   );
