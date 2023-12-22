@@ -15,7 +15,7 @@ function App() {
         <div className="RadarCont"></div>
         <button className="btn1">LAND SCANNER</button>
         <button className="btn1">Altitude Map</button>
-        <button className="btn2"></button>
+        <button className="btn2">Auto Landing</button>
         <button className="btn2"></button>
         <div className="right"></div>
 
