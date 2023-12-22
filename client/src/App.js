@@ -8,6 +8,7 @@ function App() {
           <li>Map</li>
           <li>Reboot</li>
           <li>Shut Down</li>
+          <li>Discconnect</li>
         </ul>
       </Headers>
       <main>
