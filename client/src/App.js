@@ -13,7 +13,7 @@ function App() {
       <main>
         <div className="Left"></div>
         <div className="RadarCont"></div>
-        <button className="btn1"></button>
+        <button className="btn1">LSND SCSNNRT</button>
         <button className="btn1"></button>
         <button className="btn2"></button>
         <button className="btn2"></button>
