@@ -93,3 +93,9 @@ function uiUpdate(c){
     Rotor(1);
     updateVoltageAndAmperage()
   }
+  else if(c=="R0"){
+    componentSwitch("btnPropller", 0)
+    incomingData("RF", "Propplers"+offV, "DigitalWrited PIN D007 LOW")
+    Rotor(0); 
+    updateVoltageAndAmperage()
+  }
