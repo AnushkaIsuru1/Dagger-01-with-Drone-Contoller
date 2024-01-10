@@ -119,4 +119,8 @@ function uiUpdate(c){
     incomingData("XF", "Laser"+offV, "DigitalWrited PIN D002 LOW")
     updateVoltageAndAmperage()
   }
-  
+  else if(c=="AL1"){    
+    incomingData("ALP", "System Offline", "Auto Landing will be Engage")  
+    radarReady(1)  
+    updateVoltageAndAmperage()
+  }
