@@ -104,3 +104,8 @@ function uiUpdate(c){
     incomingData("LT", "Lamp" + onV, "DigitalWrited PIN D004 HIGH")
     updateVoltageAndAmperage()
   }
+  else if(c=="L0"){
+    componentSwitch("btnLamp", 0)
+    incomingData("LF", "Lamp"+offV, "DigitalWrited PIN D004 LOW") 
+    updateVoltageAndAmperage()
+  }
