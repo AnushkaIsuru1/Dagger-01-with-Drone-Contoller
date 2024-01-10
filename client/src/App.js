@@ -99,3 +99,8 @@ function uiUpdate(c){
     Rotor(0); 
     updateVoltageAndAmperage()
   }
+  else if(c=="L1"){
+    componentSwitch("btnLamp", 1)
+    incomingData("LT", "Lamp" + onV, "DigitalWrited PIN D004 HIGH")
+    updateVoltageAndAmperage()
+  }
