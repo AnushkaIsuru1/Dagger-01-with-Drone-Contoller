@@ -40,3 +40,4 @@ function T4(){
   //landed()
   //isDisconnected = 0
 }
+function btnDisconnect(){sendToArduino('O');}
