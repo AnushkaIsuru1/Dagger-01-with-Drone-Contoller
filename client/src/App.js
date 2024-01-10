@@ -84,3 +84,6 @@ function uiUpdate(c){
   var onV = ' Deployed',
   offV=' Turned OFF',
   g1=""
+  if(c=="PW"){
+    incomingData("PW", "Drone Ready", "Drone Connected via BLUTOOTH")
+  }
