@@ -28,3 +28,15 @@ function T(){
   }, 6000)
   */
 }
+
+function T2(){
+  
+}
+function T3(){
+  sendToArduino('.');
+}
+function T4(){
+  sendToArduino('-');
+  //landed()
+  //isDisconnected = 0
+}
