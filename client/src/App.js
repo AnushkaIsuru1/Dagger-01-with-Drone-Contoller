@@ -41,3 +41,19 @@ function T4(){
   //isDisconnected = 0
 }
 function btnDisconnect(){sendToArduino('O');}
+
+//======================================================== * * * * *  Send data to Backend  * * * * * ======================================================== 
+
+function sendToArduino(x){  
+  Log("O", "transmitArduino", x)
+
+  const func = async () => {  
+    try {    
+      await axios.post("http://localhost:8080", {cmd: x}).then(resp=>{        
+       });      
+    } catch (err) {
+      console.log(err);      
+    }
+  }
+  func()
+}
