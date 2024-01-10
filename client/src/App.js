@@ -87,3 +87,9 @@ function uiUpdate(c){
   if(c=="PW"){
     incomingData("PW", "Drone Ready", "Drone Connected via BLUTOOTH")
   }
+  else  if(c=="R1"){
+    componentSwitch("btnPropller", 1)
+    incomingData("RT", "Propplers" + onV, "DigitalWrited PIN D007 HIGH")
+    Rotor(1);
+    updateVoltageAndAmperage()
+  }
