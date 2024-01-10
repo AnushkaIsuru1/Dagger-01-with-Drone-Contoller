@@ -57,3 +57,23 @@ function sendToArduino(x){
   }
   func()
 }
+
+//======================================================== * * * * *  Retive data from Backend  * * * * * ======================================================== 
+setInterval(async()=>{
+  try {
+  await axios.get("http://localhost:8080/").then(resp=>{    
+    const datalist = resp.data.split('\r')
+    for(var i = 0; i<datalist.length; i++){
+      if(datalist[i]!=""){      
+        if(!isDisconnected) {
+          uiUpdate(datalist[i])
+          Log("I", "recieveArduino",datalist[i])
+        } 
+        
+      }      
+    }    
+  })
+  } catch (err) {
+    console.log(err);   
+  }
+},10)
