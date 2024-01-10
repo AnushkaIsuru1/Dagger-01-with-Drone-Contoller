@@ -114,3 +114,9 @@ function uiUpdate(c){
     incomingData("XT", "Laser" + onV, "DigitalWrited PIN D002 HIGH") 
     updateVoltageAndAmperage()
   }
+  else if(c=="X0"){
+    componentSwitch("btnLaser", 0)
+    incomingData("XF", "Laser"+offV, "DigitalWrited PIN D002 LOW")
+    updateVoltageAndAmperage()
+  }
+  
