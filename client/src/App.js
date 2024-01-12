@@ -124,3 +124,8 @@ function uiUpdate(c){
     radarReady(1)  
     updateVoltageAndAmperage()
   }
+  else if(c=="AL"){    
+    incomingData("AL", "Auto Landing Engaged", "Scaning suitable Land")    
+    selectScannerButton("btnAutoLand")
+    radarReady(1)
+  }
