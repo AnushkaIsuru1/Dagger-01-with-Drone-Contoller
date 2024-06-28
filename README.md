@@ -18,15 +18,15 @@ By overcoming challenges like Arduino's single-thread limitation and Bluetooth c
   - **1. React** - Develop Front-end
   - **2. Node JS** - Develop Back-end
   - **3. Arduino** - Programme Drone Model
-<br>
+<hr>
 
 ## DAGGER - 01
 <p align="center">
   <img width="100%"  src="DAGGER - 01 (A Drone Model).jpg" alt="DAGGER - 01 (A Drone Model)">
 </p>
 
-### <a href="https://youtu.be/2T9WsozWct8">Watch this Project in Youtube</a>
-<br>
+### <a href="https://youtu.be/2T9WsozWct8">Watch this project in Youtube</a>
+<hr>
 
 ## Special Features
 
@@ -49,7 +49,7 @@ void feedbackLoop(){
   }
   ...
 }
-  ...
+...
 
 switch (inp)
   {
@@ -60,7 +60,7 @@ switch (inp)
     Serial.println("GPWS");
     break;
   }
-    ...
+...
 ```
 
 ### 02. Logging
@@ -88,7 +88,7 @@ I implemented logging functions in the back-end to track:
 | INCOMING  | 2023-07-24 17:56:24 | recieveArduino  | 53\t\t53      |
 | INCOMING  | 2023-07-24 17:56:24 | recieveArduino  | AT53        |
 
-<br>
+<hr>
 
 ## Backend
 
@@ -123,8 +123,8 @@ parser.on('data', (data) => {
 });
 ...
 ```
-<br>
+<hr>
 
-## <a href="https://youtu.be/2T9WsozWct8">Watch this Project in Youtube</a>
+## <a href="https://youtu.be/2T9WsozWct8">Watch this project in Youtube</a>
 
 <br>
