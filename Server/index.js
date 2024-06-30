@@ -35,6 +35,13 @@ parser.on('data', (data) => {
 app.use(express.json())
 app.use(cors())
 
+app.get("/", (req, res) => {
+  res.json(
+    ss
+  )
+  ss = ""
+})
+
 
 app.listen(8080, () => {
   console.log("Connected to backend")
