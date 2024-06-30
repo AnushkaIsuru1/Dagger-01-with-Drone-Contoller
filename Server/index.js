@@ -1,6 +1,6 @@
 const { SerialPort } = require('serialport');
 const { ReadlineParser } = require('@serialport/parser-readline');
-const parser = new ReadlineParser({ delimeter : '\r\n'});
+const parser = new ReadlineParser({ delimeter: '\r\n' });
 var fs = require('fs')
 
 var express = require('express');
@@ -23,10 +23,19 @@ port.open((err) => {
   }
 });
 
-var ss=""
+var ss = ""
 
 port.pipe(parser);
 parser.on('data', (data) => {
-  console.log(data.toString());  
-  ss+=data.toString()
+  console.log(data.toString());
+  ss += data.toString()
 });
+
+
+app.use(express.json())
+app.use(cors())
+
+
+app.listen(8080, () => {
+  console.log("Connected to backend")
+})
