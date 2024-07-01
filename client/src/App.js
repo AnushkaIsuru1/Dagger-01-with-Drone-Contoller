@@ -134,3 +134,11 @@ function uiUpdate(c){
     selectScannerButton("btnLandScn")
     radarReady(1)
   }
+  else if(c=="PM"){    
+    incomingData("PM", "Proximity Map Engaged", "Mapping data of Promity")    
+    selectScannerButton("btnProxiMap")
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter2")
+    document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter3")
+    document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = "00"
+    radarReady(1)
+  }
