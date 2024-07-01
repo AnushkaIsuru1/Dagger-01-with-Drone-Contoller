@@ -7,6 +7,7 @@ var express = require('express');
 var cors = require('cors');
 const app = express()
 
+
 const config = {
   path: 'COM5',
   baudRate: 9600,
@@ -49,8 +50,16 @@ app.post("/", async (req, res) => {
   } catch (w) {
     console.log(w)
   }
-
 })
+
+
+app.put("/", async (req, res) => {
+  fs.appendFile("log.csv", req.body.str, (err) => {
+    if (err) throw err;
+  });
+  res.status(201).json({ status: 'Success' })
+})
+
 
 app.listen(8080, () => {
   console.log("Connected to backend")
