@@ -129,3 +129,8 @@ function uiUpdate(c){
     selectScannerButton("btnAutoLand")
     radarReady(1)
   }
+  else if(c=="LS"){    
+    incomingData("LS", "Land Level Scanner Engaged", "Scaning...")    
+    selectScannerButton("btnLandScn")
+    radarReady(1)
+  }
