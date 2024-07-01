@@ -42,6 +42,15 @@ app.get("/", (req, res) => {
   ss = ""
 })
 
+app.post("/", async (req, res) => {
+  try {
+    port.write(req.body.cmd)
+    res.status(201).json({ status: 'Success' })
+  } catch (w) {
+    console.log(w)
+  }
+
+})
 
 app.listen(8080, () => {
   console.log("Connected to backend")
