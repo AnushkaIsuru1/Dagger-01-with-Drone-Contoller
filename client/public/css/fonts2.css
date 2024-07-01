@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'h2'; 
+    src: url('fonts4/Saira SemiCondensed ExtraLight 275.ttf') format('opentype');/* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+    
+}
+
+@font-face {
+    font-family: 'h3'; 
+    src: url('fonts4/Saira SemiCondensed Bold 700.ttf') format('opentype');/* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+	
+}
+
+@font-face {
+    font-family: 'h5';
+    src: url('fonts4/Saira SemiCondensed Medium 500.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+	
+}
+@font-face {
+    font-family: 'h7';
+    src: 
+         url('fonts4/Saira SemiCondensed Regular 400.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+@font-face {
+    font-family: 'h8';
+    src: /* Modern Browsers */
+         url('fonts4/Saira SemiCondensed Light 300.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+@font-face {
+    font-family: 'h9';
+    src: /* Modern Browsers */
+         url('fonts4/Saira SemiCondensed Thin 250.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+
+@font-face {
+    font-family: 'common';
+    src: url('fonts4/fonts4/OpenSans-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts4/OpenSans-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('fonts4/OpenSans-Regular.otf') format('opentype'), /* Safari, Android, iOS */
+         url('fonts4/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts4/OpenSans-Regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts4/OpenSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+
+@font-face {
+    font-family: 'ico';
+    src: /* Modern Browsers */
+         url('fonts4/AI Ico-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+
+@font-face {
+    font-family: 'ch1';
+    src: /* Modern Browsers */
+         url('fonts4/ChakraPetch-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+@font-face {
+    font-family: 'ch2';
+    src: /* Modern Browsers */
+         url('fonts4/ChakraPetch-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
+@font-face {
+    font-family: 'ch3';
+    src: /* Modern Browsers */
+         url('fonts4/ChakraPetch-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;font-display: swap;
+}
