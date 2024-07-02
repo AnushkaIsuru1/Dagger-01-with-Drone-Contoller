@@ -206,3 +206,50 @@ function uiUpdate(c){
     setRadar(c ,0)    
   }
 }
+//======================================================== * * * * *  Log  * * * * * ======================================================== 
+
+var isLogOpend = 1;
+
+function Log(tp="", funcName="", m1="", m2="", m3=""){
+
+  if(tp==""){tp = "UI_UPDATE"}
+  else if(tp=="I"){tp = "INCOMING"}
+  else if(tp=="O"){tp = "OUTGOING"}
+
+  var str = ""
+
+  if(isLogOpend){
+    str="\n\n\n"
+  }
+  var sep = ",\t\t\t\t"
+  str+="[ "
+  str+=tp
+  str+=" ]"
+  str+=sep
+
+  str+=getTime()
+  str+=sep
+
+  str+=funcName
+  str+=",\t\t\t\t\t\t"
+
+  str+=m1/*
+  str+=sep
+
+  str+=m2
+  str+=sep
+
+  str+=m3*/
+  str+="\n"
+
+  const func = async () => {  
+    try {    
+      await axios.put("http://localhost:8080", {str: str}).then(resp=>{        
+       });      
+    } catch (err) {
+      console.log(err);      
+    }
+  }
+  func()
+  isLogOpend = 0;
+}
