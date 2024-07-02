@@ -142,3 +142,9 @@ function uiUpdate(c){
     document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = "00"
     radarReady(1)
   }
+  else if(c=="GP"){    
+    incomingData("GP", "GPWS Engaged", "Ground Proximity Warining System") 
+    selectScannerButton("btnGPWS")   
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
+    radarReady(2)
+  }
