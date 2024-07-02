@@ -371,3 +371,76 @@ function setRadar(s, t=1){
   }
  
 }
+function gpws(s){
+  var str = s.split(','), li,len , angleS, rotateF;
+  if(str[1]>30){    
+    if(!oldGpwsAngle){
+      angleS = 180;
+      rotateF = (90 - str[1])
+      if(str[1]==140){
+        oldGpwsAngle =1
+        rotateF = (60 - str[1])
+        setTimeout(()=>{
+          document.getElementsByClassName("radarIndicator")[0].style.transition = '0s'
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(0deg) rotate('+ 50 +'deg)'       
+             
+        },250)
+        setTimeout(()=>{         
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(0deg) rotate('+ 50 +'deg)'
+          document.getElementsByClassName("radarIndicator")[0].style.transition = 'all .5s'
+        },360)
+      }
+    }else if(oldGpwsAngle){
+      angleS = 0;
+      rotateF = (str[1] - 90)
+      if(str[1]==40){
+        oldGpwsAngle =0
+        rotateF = (str[1] - 120)
+        setTimeout(()=>{
+          document.getElementsByClassName("radarIndicator")[0].style.transition = '0s'
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(180deg) rotate('+ 50 +'deg)'          
+        },250)
+        setTimeout(()=>{         
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(180deg) rotate('+ 50 +'deg)'
+          document.getElementsByClassName("radarIndicator")[0].style.transition = 'all .5s'
+        },360)
+      }
+    }
+    document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY('+ angleS +'deg) rotate('+ rotateF +'deg)'
+    
+
+  li = document.getElementById("gpwsrSpotsUL").children[((str[1] - 40 )/10)]
+  len = str[2];
+  
+  if(20<len && len <= 40){ 
+    li.children[3].children[0].classList.add("SpotShow") 
+  }
+  else{
+    li.children[3].children[0].classList.remove("SpotShow")     
+  }
+
+  if(40<len && len <= 60){ 
+    li.children[2].children[0].classList.add("SpotShow") 
+  }
+  else{
+    li.children[2].children[0].classList.remove("SpotShow")     
+  }
+
+  if(60<len && len <= 80){ 
+    li.children[1].children[0].classList.add("SpotShow") 
+  }
+  else{
+    li.children[1].children[0].classList.remove("SpotShow")     
+  }  
+  if(80<len && len <= 100){ 
+    li.children[0].children[0].classList.add("SpotShow") 
+  }
+  else{
+    li.children[0].children[0].classList.remove("SpotShow")     
+  }
+  
+  if(40<len && len <= 60){ 
+    alert2("THREAT DETECTED", "GPWS FOUND IMPACT", "<span class='special'>Pull UP</span> or <span class='special'>Auto Filot</span> mode will be Engage")
+  }
+} 
+}
