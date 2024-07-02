@@ -148,3 +148,13 @@ function uiUpdate(c){
     document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
     radarReady(2)
   }
+  else if(c=="LH"){    
+    incomingData("LH", "Drone Lanched", "All Systems Ready")  
+    launched()      
+  }
+  else if(c=="LD"){    
+    incomingData("LD", "Drone Landed", "All Systems Shuted Down")    
+    radarReady(0)
+    landed()
+    setAltitude(0)
+  }
