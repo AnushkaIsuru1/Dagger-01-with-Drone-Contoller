@@ -187,3 +187,22 @@ function uiUpdate(c){
     alert2("DRONE DISCONNECTED","SYSTEM OFFLINE", "AUTO LANDING Mode will be Engage")
     isDisconnected = 1
   }
+  
+  g1 = c.substring(0,2)
+
+  if(g1=="AT"){
+    setAltitude(c.split("AT")[1])
+  }
+  else if(g1=="SS"){
+    setSensorValue(c.split("SS,")[1])
+  }
+  else if(g1=="GG"){
+    gpws(c)    
+  }
+  else if(g1=="GS"){
+    setRadar(c)    
+  }
+  else if(g1=="MA"){
+    setRadar(c ,0)    
+  }
+}
