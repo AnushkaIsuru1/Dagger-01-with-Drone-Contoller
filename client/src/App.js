@@ -182,3 +182,8 @@ function uiUpdate(c){
     document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter3")
     document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
   }
+  else if(c=="OF"){            
+    incomingData("OF", "SYSTEM OFFLINE", "Drone Disconnected")  
+    alert2("DRONE DISCONNECTED","SYSTEM OFFLINE", "AUTO LANDING Mode will be Engage")
+    isDisconnected = 1
+  }
