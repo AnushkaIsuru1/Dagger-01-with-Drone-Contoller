@@ -158,3 +158,12 @@ function uiUpdate(c){
     landed()
     setAltitude(0)
   }
+  else if(c=="RS"){   
+    
+    radarReady(0)
+    selectScannerButton(0)
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter2")
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
+    document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
+    maxContact = 70
+  }
