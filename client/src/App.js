@@ -176,3 +176,9 @@ function uiUpdate(c){
     document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
     document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
   }
+  else if(c=="SD"){            
+    incomingData("SL", "Land Sequence Started", "Drone will land in 15s")  
+    document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter2")
+    document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter3")
+    document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
+  }
