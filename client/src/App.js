@@ -267,3 +267,107 @@ function getTime(){
 
   return(year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
 }
+var oldGpwsAngle = 0,maxContact = 70;
+
+function setRadar(s, t=1){
+  var str = s.split('-'), li,li2,spot,len , angleS, rotateF
+    if(maxContact>str[3] * 1 && str[3] > 30){maxContact = str[3]}
+    if(maxContact>str[4] * 1 && str[4] > 30) {maxContact = str[4]}
+    
+    if(str[1]%2==1){
+      angleS = 180;
+      rotateF =  str[2] * -1
+      if(str[2]==180){        
+        rotateF = -210
+        setTimeout(()=>{
+          document.getElementsByClassName("radarIndicator")[0].style.transition = '0s'
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(0deg) rotate('+ 0 +'deg)'       
+             
+        },250)
+        setTimeout(()=>{         
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(0deg) rotate('+ 0 +'deg)'
+          document.getElementsByClassName("radarIndicator")[0].style.transition = 'all .5s'
+        },360)
+
+        if(!t){
+          CountDown("RadarcenterText",maxContact, 500);          
+        }        
+      }
+    }else{
+      angleS = 0;
+      rotateF = (180 - str[2]) * -1 
+      if(str[2]==0){        
+        rotateF = -210
+        setTimeout(()=>{
+          document.getElementsByClassName("radarIndicator")[0].style.transition = '0s'
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(180deg) rotate('+ 0 +'deg)'       
+             
+        },250)
+        setTimeout(()=>{         
+          document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(180deg) rotate('+ 0 +'deg)'
+          document.getElementsByClassName("radarIndicator")[0].style.transition = 'all .5s'
+        },360)
+
+        if(!t){
+          CountDown("RadarcenterText",maxContact, 500);          
+        } 
+      }
+    }
+    document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY('+ angleS +'deg) rotate('+ rotateF +'deg)'
+    
+
+  li2 =  document.getElementById("redarSpotsUL").children[((str[2] - 10 )/10)]
+  li = document.getElementById("redarSpotsUL").children[((str[2]*1 + 170 )/10)]
+
+  
+  spot = [0,3,2,1,0][str[1]]
+  if(t){
+    if(str[3]!=0){
+      li.children[spot].children[0].classList.add("radarSpotR")
+      li.children[spot].children[0].children[1].innerHTML = str[3]
+    }
+    else{
+      li.children[spot].children[0].classList.remove("radarSpotR")
+      li.children[spot].children[0].children[1].innerHTML = 0
+    }
+    if(str[4]!=0){
+      li2.children[spot].children[0].classList.add("radarSpotR")
+      li2.children[spot].children[0].children[1].innerHTML = str[4]
+    }
+    else{
+      li2.children[spot].children[0].classList.remove("radarSpotR")
+      li2.children[spot].children[0].children[1].innerHTML = 0
+    }
+  }else{
+    var lc,rc, ra1 = 50, ra2 = 40;
+    li.children[spot].children[0].classList.remove("radarSpotR")
+    li.children[spot].children[0].classList.remove("radarSpotG")
+    li.children[spot].children[0].classList.remove("radarSpotY")
+
+    li2.children[spot].children[0].classList.remove("radarSpotR")
+    li2.children[spot].children[0].classList.remove("radarSpotG")
+    li2.children[spot].children[0].classList.remove("radarSpotY")
+
+    lc = rc = "radarSpotG"
+    if(str[3]<ra1){lc = "radarSpotY"}
+    if(str[3]<ra2){lc = "radarSpotR"}
+
+    if(str[4]<ra1){rc = "radarSpotY"}
+    if(str[4]<ra2){rc = "radarSpotR"}
+
+    li.children[spot].children[0].classList.add(lc)
+    li.children[spot].children[0].children[1].innerHTML = str[3]
+
+    li2.children[spot].children[0].classList.add(rc)
+    li2.children[spot].children[0].children[1].innerHTML = str[4]
+
+    if(str[2]==170){
+      document.getElementById("redarSpotsUL").children[17].children[spot].children[0].classList.add(lc)
+      document.getElementById("redarSpotsUL").children[17].children[spot].children[0].children[1].innerHTML = str[3]
+
+      document.getElementById("redarSpotsUL").children[35].children[spot].children[0].classList.add(rc)
+      document.getElementById("redarSpotsUL").children[35].children[spot].children[0].children[1].innerHTML = str[4]
+    }
+  }
+ 
+}
