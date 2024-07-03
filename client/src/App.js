@@ -609,3 +609,11 @@ function btnGPWS(){
     sendToArduino('.')
   }
 }
+
+function btnLandScn(){
+  if(document.getElementById("btnLandScn").className=="btn3"){
+    sendToArduino('6')
+  }else{
+    sendToArduino('.')
+  }
+}
