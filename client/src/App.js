@@ -593,3 +593,11 @@ function btnAutoLand(){
     sendToArduino('.')
   }
 }
+
+function btnProxiMap(){
+  if(document.getElementById("btnProxiMap").className=="btn3"){
+    sendToArduino('8')
+  }else{
+    sendToArduino('.')
+  }
+}
