@@ -578,3 +578,10 @@ function updateVoltageAndAmperage(V=0,A=0){
     CountDown("voltage",v, 300);
   }, 500);
 }
+function btnUP(){
+  sendToArduino('1')
+}
+
+function btnDOWN(){
+  sendToArduino('0')
+} 
