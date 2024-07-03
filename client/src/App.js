@@ -536,3 +536,18 @@ function alert2(a,b,c,d=0){
       
   }, d*1000)
 }
+
+function incomingData(x,y,z){
+  document.getElementsByClassName("logList")[0].innerHTML = '<li><div><svg data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.89 100"><g data-name="Layer 1"><polygon points="32.68 0 0 32.68 0 100 86.21 100 118.89 67.32 118.89 0 32.68 0"></polygon></g></svg><span>' + x + '</span></div><h3>' +y+ '</h3><h5>' +z+ '</h5></li>' + document.getElementsByClassName("logList")[0].innerHTML
+  
+    setTimeout(()=>{
+      try{
+        document.getElementsByClassName("logList")[0].children[0].classList.add("li1")
+        document.getElementsByClassName("logList")[0].children[1].classList.add("li2")
+        document.getElementsByClassName("logList")[0].children[2].classList.add("li3")
+        document.getElementsByClassName("logList")[0].children[3].classList.add("li4")
+      }catch(e){}
+    },20
+    )
+    
+}
