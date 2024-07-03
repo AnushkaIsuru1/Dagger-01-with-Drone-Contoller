@@ -601,3 +601,11 @@ function btnProxiMap(){
     sendToArduino('.')
   }
 }
+
+function btnGPWS(){
+  if(document.getElementById("btnGPWS").className=="btn3"){
+    sendToArduino('9')
+  }else{
+    sendToArduino('.')
+  }
+}
