@@ -516,3 +516,23 @@ function radarReady(x=0){
   }
   
 }
+
+function alert2(a,b,c,d=0){
+    
+  var div = document.getElementsByClassName("ai_sf_alert2_cont")[0].children[3].children, c1;
+  c1 = document.getElementsByClassName("ai_sf_alert2_cont")[0].getAttribute("data-c") * 1 + 1
+  document.getElementsByClassName("ai_sf_alert2_cont")[0].setAttribute("data-c", c1)
+  div[0].innerHTML = a;
+  div[1].innerHTML = b;
+  div[2].innerHTML =c;
+  document.getElementsByClassName("ai_sf_alert2_cont")[0].classList.add("ai_sf_alert2_cont_show");
+  if(!d){
+      d = 8
+  }
+  setTimeout(()=>{
+    if(document.getElementsByClassName("ai_sf_alert2_cont")[0].getAttribute("data-c")==c1){
+      document.getElementsByClassName("ai_sf_alert2_cont")[0].classList.remove("ai_sf_alert2_cont_show");
+    }
+      
+  }, d*1000)
+}
