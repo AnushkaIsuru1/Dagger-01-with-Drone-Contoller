@@ -444,3 +444,75 @@ function gpws(s){
   }
 } 
 }
+function radarReady(x=0){
+  //document.getElementsByClassName("radarIndicatorCont")[0].style.transform = ''
+  var ul,len
+  ul = document.getElementById("gpwsrSpotsUL").children;
+    len = ul.length;
+    for (var i = 0 ; i<len; i++){   
+        
+        var spots = ul[i].children;
+        
+        for (var j = 0 ; j<5; j++){
+            try{
+                spots[j].children[0].classList.remove("SpotShow");
+            }catch(e){
+                
+            }
+            
+        }
+    }
+
+    ul = document.getElementById("redarSpotsUL").children;
+    len = ul.length;
+    for (var i = 0 ; i<len; i++){   
+        
+        var spots = ul[i].children;
+        
+        for (var j = 0 ; j<5; j++){
+            try{
+                spots[j].children[0].classList.remove("radarSpotR"); 
+                spots[j].children[0].classList.remove("radarSpotY");
+                spots[j].children[0].classList.remove("radarSpotG");
+            }catch(e){
+                
+            }
+            
+        }
+    }
+  if(x==1){
+    document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(180deg) rotate(0deg)'
+    document.getElementsByClassName("radarIndicator")[0].classList.add("radarIndicatorShow");
+    document.getElementsByClassName("radarIndicator")[0].classList.remove("radarIndicatorGPWS");
+    document.getElementById("redarGrid").children[35].children[0].innerHTML = 350;
+    document.getElementById("redarGrid").children[34].children[0].innerHTML = 340;
+    document.getElementById("redarGrid").children[33].children[0].innerHTML = 330;
+    document.getElementById("redarGrid").children[32].children[0].innerHTML = 320;
+    document.getElementById("redarGrid").children[31].children[0].innerHTML = 310;
+    document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
+  }else if(x==2){
+    document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(180deg) rotate(50deg)'
+    document.getElementsByClassName("radarIndicator")[0].classList.add("radarIndicatorShow");
+    document.getElementsByClassName("radarIndicator")[0].classList.add("radarIndicatorGPWS");
+    document.getElementById("redarGrid").children[35].children[0].innerHTML = -10;
+    document.getElementById("redarGrid").children[34].children[0].innerHTML = -20;
+    document.getElementById("redarGrid").children[33].children[0].innerHTML = -30;
+    document.getElementById("redarGrid").children[32].children[0].innerHTML = -40;
+    document.getElementById("redarGrid").children[31].children[0].innerHTML = -50;
+    document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
+
+  }else{
+    
+    document.getElementsByClassName("radarIndicator")[0].classList.remove("radarIndicatorShow");
+    document.getElementsByClassName("radarIndicator")[0].classList.remove("radarIndicatorGPWS");
+    document.getElementById("redarGrid").children[35].children[0].innerHTML = 350;
+    document.getElementById("redarGrid").children[34].children[0].innerHTML = 340;
+    document.getElementById("redarGrid").children[33].children[0].innerHTML = 330;
+    document.getElementById("redarGrid").children[32].children[0].innerHTML = 320;
+    document.getElementById("redarGrid").children[31].children[0].innerHTML = 310;
+    document.getElementsByClassName("Radarcenter")[0].children[2].innerHTML = ""
+    document.getElementsByClassName("radarIndicator")[0].style.transform = 'rotateY(0deg) rotate(0deg)'
+    //document.getElementsByClassName("radarIndicatorCont")[0].style.transform = 'rotateY(180deg)'
+  }
+  
+}
