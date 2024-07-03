@@ -551,3 +551,30 @@ function incomingData(x,y,z){
     )
     
 }
+function updateVoltageAndAmperage(V=0,A=0){        
+  var v = 5,
+  a = 1 + A;
+  setTimeout(() => {
+      
+    if(document.getElementById("btnLaser").className!="btn2"){
+      a+=1
+    }
+
+    if(document.getElementById("btnLamp").className!="btn2"){
+      a+=1
+      v = 12
+    }
+
+    if(document.getElementById("btnPropller").className!="btn2"){
+      a+=4
+      v = 12
+    }
+
+    if(V!=0){
+      v = 12
+    }
+
+    CountDown("amperage",a, 300);
+    CountDown("voltage",v, 300);
+  }, 500);
+}
