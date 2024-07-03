@@ -585,3 +585,11 @@ function btnUP(){
 function btnDOWN(){
   sendToArduino('0')
 } 
+
+function btnAutoLand(){
+  if(document.getElementById("btnAutoLand").className=="btn3"){
+    sendToArduino('7')
+  }else{
+    sendToArduino('.')
+  }
+}
