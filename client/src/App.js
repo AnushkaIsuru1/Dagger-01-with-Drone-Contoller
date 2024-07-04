@@ -661,3 +661,13 @@ function btnSound(){
   var e = document.getElementById("btnSound")
   sendToArduino('D')
 }
+
+//document.getElementById("btnPropller").classList.add("act");
+function componentSwitch(eId, s){
+  var e = document.getElementById(eId)
+  if(s==1){
+    e.classList.add("act")
+  }else{
+    e.classList.remove("act")
+  }  
+}
