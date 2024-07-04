@@ -617,3 +617,15 @@ function btnLandScn(){
     sendToArduino('.')
   }
 }
+
+function selectScannerButton(x){
+  document.getElementById("btnAutoLand").classList.remove("act")
+  document.getElementById("btnProxiMap").classList.remove("act")
+  document.getElementById("btnGPWS").classList.remove("act")
+  document.getElementById("btnLandScn").classList.remove("act")
+  if(x){document.getElementById(x).classList.add("act")}
+  if(document.getElementById("btnGPWS").className != "btn3 act"){
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter2")
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
+  }
+}
