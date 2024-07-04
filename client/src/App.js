@@ -656,3 +656,8 @@ function btnLaser(){
     sendToArduino('b')
   }
 }
+
+function btnSound(){
+  var e = document.getElementById("btnSound")
+  sendToArduino('D')
+}
