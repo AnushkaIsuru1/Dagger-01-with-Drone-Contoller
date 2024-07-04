@@ -694,3 +694,23 @@ function landed(){
   document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter2")
   document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter3")
 }
+
+function Rotor(x = 0){
+  var s = 1000, t=5000;
+  if(x){    
+    document.getElementById("btnPropller").classList.add("act");
+    CountDown("speedValue-L", s, t);
+    CountDown("speedValue-R", s, t);
+    document.getElementsByClassName("propller")[0].classList.add("propller2")
+    document.getElementsByClassName("propller")[1].classList.add("propller2")
+    
+  }else{
+    document.getElementById("btnPropller").classList.remove("act");
+    CountDown("speedValue-L", 0, t);
+    CountDown("speedValue-R", 0, t);
+    setTimeout(()=>{
+      document.getElementsByClassName("propller")[0].classList.remove("propller2")
+      document.getElementsByClassName("propller")[1].classList.remove("propller2")
+    }, t + 3500)
+  }
+}
