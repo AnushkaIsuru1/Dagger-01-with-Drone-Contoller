@@ -671,3 +671,12 @@ function componentSwitch(eId, s){
     e.classList.remove("act")
   }  
 }
+function btnRadarcenter(){
+  if(document.getElementsByClassName("Radarcenter")[0].className=="Radarcenter"){
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter2")
+    document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
+    sendToArduino('4')
+  }else{
+    sendToArduino('K')
+  }
+} 
