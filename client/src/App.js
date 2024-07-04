@@ -686,3 +686,11 @@ function launched(){
     document.getElementsByClassName("shipCont1")[0].classList.add("shipCont2")      
   }, 0)
 }
+
+function landed(){
+  setTimeout(()=>{
+    document.getElementsByClassName("shipCont1")[0].classList.remove("shipCont2")      
+  }, 0)
+  document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter2")
+  document.getElementsByClassName("Radarcenter")[0].classList.remove("Radarcenter3")
+}
