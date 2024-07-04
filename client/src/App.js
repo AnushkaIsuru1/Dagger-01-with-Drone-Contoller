@@ -638,3 +638,12 @@ function btnPropller(){
     sendToArduino('c')
   }
 }
+
+function btnLamp(){
+  var e = document.getElementById("btnLamp")
+  if(e.className=="btn2"){
+    sendToArduino('A')
+  }else{
+    sendToArduino('a')
+  }
+}
