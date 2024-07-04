@@ -629,3 +629,12 @@ function selectScannerButton(x){
     document.getElementsByClassName("Radarcenter")[0].classList.add("Radarcenter3")
   }
 }
+
+function btnPropller(){
+  var e = document.getElementById("btnPropller")
+  if(e.className=="btn2"){
+    sendToArduino('C')
+  }else{
+    sendToArduino('c')
+  }
+}
