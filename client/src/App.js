@@ -680,3 +680,9 @@ function btnRadarcenter(){
     sendToArduino('K')
   }
 } 
+
+function launched(){
+  setTimeout(()=>{
+    document.getElementsByClassName("shipCont1")[0].classList.add("shipCont2")      
+  }, 0)
+}
