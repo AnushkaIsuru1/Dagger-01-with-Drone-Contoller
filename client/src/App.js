@@ -647,3 +647,12 @@ function btnLamp(){
     sendToArduino('a')
   }
 }
+
+function btnLaser(){
+  var e = document.getElementById("btnLaser")
+  if(e.className=="btn2"){
+    sendToArduino('B')
+  }else{
+    sendToArduino('b')
+  }
+}
